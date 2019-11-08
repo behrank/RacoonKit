@@ -1,6 +1,6 @@
 ## RacoonKit
 
-![alt text](https://www.iconspng.com/uploads/raccoon-face-logo/raccoon-face-logo.png)
+![image](https://www.iconspng.com/uploads/raccoon-face-logo/raccoon-face-logo.png)
 
 RacoonKit is an layout API for iOS platform. RacoonKit is written with Swift and compatible with Swift 4.0.
 
