@@ -1,7 +1,5 @@
 ## RacoonKit
 
-![image](https://www.iconspng.com/uploads/raccoon-face-logo/raccoon-face-logo.png)
-
 RacoonKit is an layout API for iOS platform. RacoonKit is written with Swift and compatible with Swift 4.0.
 
 ## Installation [CocoaPods](https://cocoapods.com)
@@ -9,7 +7,7 @@ RacoonKit is an layout API for iOS platform. RacoonKit is written with Swift and
 Add RacoonKit to your pod file
 
 ```bash
-pod RacoonKit
+pod 'RacoonKit'
 ```
 Then type pod install command in project folder via terminal
 
