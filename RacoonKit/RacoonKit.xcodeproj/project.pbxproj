@@ -197,9 +197,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FBC8FFF23754A3D00B80AEA /* Common.swift in Sources */,
 				0FBC900323754A3D00B80AEA /* UIView.swift in Sources */,
 				0FBC900023754A3D00B80AEA /* UIView+Frame.swift in Sources */,
-				0FBC8FFF23754A3D00B80AEA /* Common.swift in Sources */,
 				0FBC900223754A3D00B80AEA /* UIView+Visual.swift in Sources */,
 				0FBC900123754A3D00B80AEA /* UIView+Positioning.swift in Sources */,
 			);
@@ -346,9 +346,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Be-Mobile.RacoonKit";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -373,9 +375,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Be-Mobile.RacoonKit";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
