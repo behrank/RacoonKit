@@ -63,12 +63,12 @@
 		0FBC8FF123754A1F00B80AEA /* RacoonKit */ = {
 			isa = PBXGroup;
 			children = (
+				0FBC8FF223754A1F00B80AEA /* RacoonKit.h */,
 				0FBC8FFA23754A3D00B80AEA /* Common.swift */,
 				0FBC8FFE23754A3D00B80AEA /* UIView.swift */,
 				0FBC8FFB23754A3D00B80AEA /* UIView+Frame.swift */,
 				0FBC8FFC23754A3D00B80AEA /* UIView+Positioning.swift */,
 				0FBC8FFD23754A3D00B80AEA /* UIView+Visual.swift */,
-				0FBC8FF223754A1F00B80AEA /* RacoonKit.h */,
 				0FBC8FF323754A1F00B80AEA /* Info.plist */,
 			);
 			path = RacoonKit;
@@ -80,7 +80,6 @@
 				7ADC3416D0B5DC836B680664 /* Pods-RacoonKit.debug.xcconfig */,
 				26C41A244377F2AE5873A263 /* Pods-RacoonKit.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

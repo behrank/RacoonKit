@@ -2,7 +2,27 @@
 //  UIView+Visual.swift
 //  RacoonKit
 //
-//  Created by Can Behran Kankul on 5.11.2019.
+// The MIT License (MIT)
+
+// Copyright (c) 2019 Can Behran Kankul
+
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 //
 
 import UIKit
@@ -10,13 +30,13 @@ import UIKit
 // MARK: Visual
 extension UIView {
     
-    /// RT: Sets corner radius
+    /// RK: Sets corner radius
     /// - Parameter radius: CGFloat
     public func setCornerRadius(radius: CGFloat) {
         self.layer.cornerRadius = radius
         self.layer.masksToBounds = true
     }
-    /// RT: Add shadow to view
+    /// RK: Add shadow to view
     /// - Parameter offset: CGSize
     /// - Parameter radius: CGFloat
     /// - Parameter color: UIColor
@@ -31,7 +51,7 @@ extension UIView {
             self.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cr).cgPath
         }
     }
-    /// RT: Add border to view with custom color
+    /// RK: Add border to view with custom color
     /// - Parameter width: CGFloat
     /// - Parameter color: UIColor
     public func addBorder(width: CGFloat, color: UIColor) {
@@ -39,7 +59,7 @@ extension UIView {
         layer.borderColor = color.cgColor
         layer.masksToBounds = true
     }
-    /// RT: Add border to view with custom color
+    /// RK: Add border to view with custom color
     /// - Parameter dimension: RacoonDimension
     /// - Parameter value: CGFloat - Default is 0
     /// - Parameter color: UIColor
@@ -55,6 +75,7 @@ extension UIView {
                 addBorderFor(x: frame.width - value, y: 0, width: value, height: frame.height, color: color)
         }
     }
+    
     fileprivate func addBorderFor(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, color: UIColor) {
         let border = CALayer()
         border.backgroundColor = color.cgColor
