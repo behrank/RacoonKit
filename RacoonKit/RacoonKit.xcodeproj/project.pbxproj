@@ -13,6 +13,7 @@
 		0FBC900123754A3D00B80AEA /* UIView+Positioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC8FFC23754A3D00B80AEA /* UIView+Positioning.swift */; };
 		0FBC900223754A3D00B80AEA /* UIView+Visual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC8FFD23754A3D00B80AEA /* UIView+Visual.swift */; };
 		0FBC900323754A3D00B80AEA /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC8FFE23754A3D00B80AEA /* UIView.swift */; };
+		EEE8ACDC888A840F40B65453 /* Pods_RacoonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA780AC04B5AC78365C3BCBE /* Pods_RacoonKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0FBC8FFC23754A3D00B80AEA /* UIView+Positioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Positioning.swift"; sourceTree = "<group>"; };
 		0FBC8FFD23754A3D00B80AEA /* UIView+Visual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Visual.swift"; sourceTree = "<group>"; };
 		0FBC8FFE23754A3D00B80AEA /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		26C41A244377F2AE5873A263 /* Pods-RacoonKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RacoonKit.release.xcconfig"; path = "Target Support Files/Pods-RacoonKit/Pods-RacoonKit.release.xcconfig"; sourceTree = "<group>"; };
+		7ADC3416D0B5DC836B680664 /* Pods-RacoonKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RacoonKit.debug.xcconfig"; path = "Target Support Files/Pods-RacoonKit/Pods-RacoonKit.debug.xcconfig"; sourceTree = "<group>"; };
+		FA780AC04B5AC78365C3BCBE /* Pods_RacoonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RacoonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE8ACDC888A840F40B65453 /* Pods_RacoonKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0FBC8FF123754A1F00B80AEA /* RacoonKit */,
 				0FBC8FF023754A1F00B80AEA /* Products */,
+				7CE63E07684BBFFCE88E9E58 /* Pods */,
+				CBA9FF7560D1A3DAC1218304 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = RacoonKit;
 			sourceTree = "<group>";
 		};
+		7CE63E07684BBFFCE88E9E58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7ADC3416D0B5DC836B680664 /* Pods-RacoonKit.debug.xcconfig */,
+				26C41A244377F2AE5873A263 /* Pods-RacoonKit.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CBA9FF7560D1A3DAC1218304 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA780AC04B5AC78365C3BCBE /* Pods_RacoonKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -85,6 +110,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FBC8FF723754A1F00B80AEA /* Build configuration list for PBXNativeTarget "RacoonKit" */;
 			buildPhases = (
+				D1790012D309CD2306860479 /* [CP] Check Pods Manifest.lock */,
 				0FBC8FEA23754A1F00B80AEA /* Headers */,
 				0FBC8FEB23754A1F00B80AEA /* Sources */,
 				0FBC8FEC23754A1F00B80AEA /* Frameworks */,
@@ -141,6 +167,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D1790012D309CD2306860479 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RacoonKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0FBC8FEB23754A1F00B80AEA /* Sources */ = {
@@ -280,6 +331,7 @@
 		};
 		0FBC8FF823754A1F00B80AEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ADC3416D0B5DC836B680664 /* Pods-RacoonKit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +358,7 @@
 		};
 		0FBC8FF923754A1F00B80AEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26C41A244377F2AE5873A263 /* Pods-RacoonKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
