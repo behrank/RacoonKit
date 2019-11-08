@@ -30,8 +30,7 @@ import UIKit
 // MARK: Frame
 extension UIView {
     
-    /// Gives and sets of a view's X coordinate
-    ///
+    /// RK: Gives and sets of a view's X coordinate
     /// - Parameter value: CGFloat
     public var frameX: CGFloat {
         get {
@@ -41,8 +40,7 @@ extension UIView {
         }
     }
     
-    /// Gives and sets of a view's Y coordinate
-    ///
+    /// RK: Gives and sets of a view's Y coordinate
     /// - Parameter value: CGFloat
     public var frameY: CGFloat {
         get {
@@ -52,8 +50,7 @@ extension UIView {
         }
     }
     
-    /// Gives and sets of a view's width value
-    ///
+    /// RK: Gives and sets of a view's width value
     /// - Parameter value: CGFloat
     public var frameWidth: CGFloat {
         get {
@@ -62,8 +59,7 @@ extension UIView {
             self.frame = CGRect(x: self.frameX, y: self.frameY, width: value, height: self.frameHeight)
         }
     }
-    /// Gives and sets of a view's height value
-    ///
+    /// RK: Gives and sets of a view's height value
     /// - Parameter value: CGFloat
     public var frameHeight: CGFloat {
         get {
@@ -72,8 +68,7 @@ extension UIView {
             self.frame = CGRect(x: self.frameX, y: self.frameY, width: self.frameWidth, height: value)
         }
     }
-    /// Gives and sets of a view's min X value
-    ///
+    /// RK: Gives and sets of a view's min X value
     /// - Parameter value: CGFloat
     public var left: CGFloat {
         get {
@@ -82,8 +77,7 @@ extension UIView {
             self.frameX = value
         }
     }
-    /// Gives and sets of a view's max X value
-    ///
+    /// RK: Gives and sets of a view's max X value
     /// - Parameter value: CGFloat
     public var right: CGFloat {
         get {
@@ -92,8 +86,7 @@ extension UIView {
             self.frameX = value - self.frameWidth
         }
     }
-    /// Gives and sets of a view's min Y value
-    ///
+    /// RK: Gives and sets of a view's min Y value
     /// - Parameter value: CGFloat
     public var top: CGFloat {
         get {
@@ -102,8 +95,7 @@ extension UIView {
             self.frameY = value
         }
     }
-    /// Gives and sets of a view's max Y value
-    ///
+    /// RK: Gives and sets of a view's max Y value
     /// - Parameter value: CGFloat
     public var bottom: CGFloat {
         get {
