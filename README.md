@@ -15,10 +15,29 @@ Then type pod install command in project folder via terminal
 pod install
 ```
 
+## Usage
+
+### Adding subviews
+
+You may add any UIView based components as just as an array to container view.
+
+```bash
+        let newView = UIView()
+        view.addSubviews(views: newView)
+```
+### Placing a view
+
+You can define views margins with an array in single line.
+
+```bash
+        let newView = UIView()
+        newView.setMargins(.top(value: 8), .left(value: 8), .right(value: 8), .bottom(value: 8))
+```
+
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
