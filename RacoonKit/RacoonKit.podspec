@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "RacoonKit"
-  spec.version      = "0.3.0"
+  spec.version      = "0.1.0"
   spec.summary      = "A lightwight UI framework => RacoonKit"
   spec.description  = "A lightwight UI framework written with using Swift."
   spec.homepage     = "https://github.com/behrank/RacoonKit"

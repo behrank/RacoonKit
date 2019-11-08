@@ -1,6 +1,6 @@
 //
 //  UIView.swift
-//  Pods-RacoonTools_Tests
+//  RacoonKit
 //
 //  Created by Behran Kankul on 15.05.2019.
 //
