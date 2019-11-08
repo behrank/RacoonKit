@@ -14,7 +14,7 @@ extension UIView {
     ///
     /// - Parameter views: UIView and its subclasses
     
-    func addSubviews(views: UIView...) {
+    public func addSubviews(views: UIView...) {
         views.forEach { (view) in
             self.addSubview(view)
         }

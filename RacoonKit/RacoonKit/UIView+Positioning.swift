@@ -15,7 +15,7 @@ extension UIView {
     /// - Parameter format: String 
     /// - Parameter views: UIView and its subclasses
     
-    func addConstraintsWithFormat(format: String, views: UIView...) {
+    public func addConstraintsWithFormat(format: String, views: UIView...) {
         
         var viewsDic = [String: UIView]()
         
@@ -28,7 +28,7 @@ extension UIView {
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDic))
     }
     
-    func setMargins(_ margins: RacoonDimension...) {
+    public func setMargins(_ margins: RacoonDimension...) {
         if let superView = self.superview {
             
             for margin in margins {
@@ -46,7 +46,7 @@ extension UIView {
         }
     }
     
-    func setMarginTo(view: UIView, of margin: RacoonDimension, value: CGFloat) {
+    public func setMarginTo(view: UIView, of margin: RacoonDimension, value: CGFloat) {
         if let superView = self.superview {
             switch margin {
                 case .top(let value):
@@ -64,24 +64,24 @@ extension UIView {
     /// Sets of a view's width
     ///
     /// - Parameter value: CGFloat
-    func setWidth(_ value: CGFloat) {
+    public func setWidth(_ value: CGFloat) {
         addConstraintsWithFormat(format: "H:[v0(\(value))]", views: self)
     }
     
     /// Set equal of a view's width to its superview
     ///
     ///
-    func setWidthEqualToSuperview() {
+    public func setWidthEqualToSuperview() {
         if let superView = self.superview {
             superView.addConstraintsWithFormat(format: "H:|[v0]|", views: self)
         }
     }
     
-    func setWidthEqualTo(view: UIView) {
+    public func setWidthEqualTo(view: UIView) {
         addConstraintsWithFormat(format: "H:[v0(==v1)]", views: self, view)
     }
     
-    func setWidthEqualTo(views: UIView...) {
+    public func setWidthEqualTo(views: UIView...) {
         for view in views {
             addConstraintsWithFormat(format: "H:[v0(==v1)]", views: self, view)
         }
@@ -90,30 +90,30 @@ extension UIView {
     ///
     /// - Parameter value: CGFloat
 
-    func setHeight(_ value: CGFloat) {
+    public func setHeight(_ value: CGFloat) {
         addConstraintsWithFormat(format: "V:[v0(\(value))]", views: self)
     }
 
     /// Set equal of a view's height to its superview
     ///
     ///
-    func setHeightEqualToSuperview() {
+    public func setHeightEqualToSuperview() {
         if let superView = self.superview {
             superView.addConstraintsWithFormat(format: "V:|[v0]|", views: self)
         }
     }
     
-    func setHeightEqualTo(view: UIView) {
+    public func setHeightEqualTo(view: UIView) {
         addConstraintsWithFormat(format: "V:[v0(==v1)]", views: self, view)
     }
     
-    func setHeightEqualTo(views: UIView...) {
+    public func setHeightEqualTo(views: UIView...) {
         for view in views {
             addConstraintsWithFormat(format: "V:[v0(==v1)]", views: self, view)
         }
     }
     
-    func setEqualDimesionsWith(view: UIView) {
+    public func setEqualDimesionsWith(view: UIView) {
         setWidthEqualTo(view: view)
         setHeightEqualTo(view: view)
     }
