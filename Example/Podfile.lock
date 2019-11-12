@@ -1,5 +1,5 @@
 PODS:
-  - RacoonKit (0.1.0)
+  - RacoonKit (0.8.1)
 
 DEPENDENCIES:
   - RacoonKit (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RacoonKit: e569077cc4923ff9ad1c24bf30de3c574e85bdc8
+  RacoonKit: 373b98ab5574d77a87bc08ff3a5198f8d749968e
 
 PODFILE CHECKSUM: 3709a2a144e0f948ce6bbb582406351a42f0258d
 
