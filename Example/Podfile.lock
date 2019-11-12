@@ -1,0 +1,16 @@
+PODS:
+  - RacoonKit (0.1.0)
+
+DEPENDENCIES:
+  - RacoonKit (from `../`)
+
+EXTERNAL SOURCES:
+  RacoonKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RacoonKit: e569077cc4923ff9ad1c24bf30de3c574e85bdc8
+
+PODFILE CHECKSUM: 3709a2a144e0f948ce6bbb582406351a42f0258d
+
+COCOAPODS: 1.8.4

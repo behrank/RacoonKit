@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RacoonKit_Example' do
+  pod 'RacoonKit', :path => '../'
+
+  target 'RacoonKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

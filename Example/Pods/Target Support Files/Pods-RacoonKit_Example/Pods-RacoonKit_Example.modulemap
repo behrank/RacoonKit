@@ -1,0 +1,6 @@
+framework module Pods_RacoonKit_Example {
+  umbrella header "Pods-RacoonKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
