@@ -11,8 +11,12 @@ Pod::Spec.new do |spec|
   spec.swift_version = '4.0'
   spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
   spec.ios.deployment_target = '10.0'
-  spec.source       = { :git => "https://github.com/behrank/RacoonKit.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/behrank/RacoonKit.git", :tag => "0.6.0" }
   spec.source_files  = "RacoonKit/**/*"
   spec.exclude_files = "RacoonKit/**/*.plist"
   spec.framework  = "UIKit"
+  spec.pod_target_xcconfig = {"PRODUCT_BUNDLE_IDENTIFIER" => "com.bemobile.RacoonKit" ,"DEVELOPMENT_TEAM" => "Can Behran Kankul"}
+  spec.info_plist = {
+  'CFBundleIdentifier' => 'com.bemobile.RacoonKit'
+}
 end
