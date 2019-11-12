@@ -53,13 +53,13 @@ extension UIView {
             for margin in margins {
                 switch margin {
                     case .top(let value):
-                    superView.addConstraintsWithFormat(format: "V:|-\(value)-[v0]", views: self)
+                        superView.addConstraintsWithFormat(format: "V:|-\(value)-[v0]", views: self)
                     case .bottom(let value):
-                    superView.addConstraintsWithFormat(format: "V:[v0]-\(value)-|", views: self)
+                        superView.addConstraintsWithFormat(format: "V:[v0]-\(value)-|", views: self)
                     case .right(let value):
-                    superView.addConstraintsWithFormat(format: "H:[v0]-\(value)-|", views: self)
+                        superView.addConstraintsWithFormat(format: "H:[v0]-\(value)-|", views: self)
                     case .left(let value):
-                    superView.addConstraintsWithFormat(format: "H:|-\(value)-[v0]", views: self)
+                        superView.addConstraintsWithFormat(format: "H:|-\(value)-[v0]", views: self)
                 }
             }
         }
@@ -71,13 +71,13 @@ extension UIView {
         if let superView = self.superview {
             switch margin {
                 case .top(let value):
-                superView.addConstraintsWithFormat(format: "V:[v0]-\(value)-[v1]", views: self, view)
+                    superView.addConstraintsWithFormat(format: "V:[v0]-\(value)-[v1]", views: self, view)
                 case .bottom(let value):
-                superView.addConstraintsWithFormat(format: "V:[v1]-\(value)-[v0]", views: self, view)
+                    superView.addConstraintsWithFormat(format: "V:[v1]-\(value)-[v0]", views: self, view)
                 case .right(let value):
-                superView.addConstraintsWithFormat(format: "H:[v1]-\(value)-[v0]", views: self, view)
+                    superView.addConstraintsWithFormat(format: "H:[v1]-\(value)-[v0]", views: self, view)
                 case .left(let value):
-                superView.addConstraintsWithFormat(format: "H:[v0]-\(value)-[v1]", views: self, view)
+                    superView.addConstraintsWithFormat(format: "H:[v0]-\(value)-[v1]", views: self, view)
             }
         }
     }
@@ -95,13 +95,17 @@ extension UIView {
     /// RK: Sets view's width equal to other view
     /// - Parameter view: UIView and its subclasses
     public func setWidthEqualTo(view: UIView) {
-        addConstraintsWithFormat(format: "H:[v0(==v1)]", views: self, view)
+        if let superView = self.superview {
+            superView.addConstraintsWithFormat(format: "H:[v0(==v1)]", views: self, view)
+        }
     }
     /// RK: Sets view's width equal to multiple views
     /// - Parameter views: an array of UIView and its subclasses
     public func setWidthEqualTo(views: UIView...) {
-        for view in views {
-            addConstraintsWithFormat(format: "H:[v0(==v1)]", views: self, view)
+        if let superView = self.superview {
+            for view in views {
+                superView.addConstraintsWithFormat(format: "H:[v0(==v1)]", views: self, view)
+            }
         }
     }
     /// RK: Sets of a view's height
@@ -109,7 +113,7 @@ extension UIView {
     public func setHeight(_ value: CGFloat) {
         addConstraintsWithFormat(format: "V:[v0(\(value))]", views: self)
     }
-
+    
     /// RK: Sets equal of a view's height to its superview
     public func setHeightEqualToSuperview() {
         if let superView = self.superview {
@@ -119,13 +123,17 @@ extension UIView {
     /// RK: Sets view's height equal to other view
     /// - Parameter view: UIView and its subclasses
     public func setHeightEqualTo(view: UIView) {
-        addConstraintsWithFormat(format: "V:[v0(==v1)]", views: self, view)
+        if let superView = self.superview {
+            superView.addConstraintsWithFormat(format: "V:[v0(==v1)]", views: self, view)
+        }
     }
     /// RK: Sets view's height equal to multiple views
     /// - Parameter views: an array of UIView and its subclasses
     public func setHeightEqualTo(views: UIView...) {
-        for view in views {
-            addConstraintsWithFormat(format: "V:[v0(==v1)]", views: self, view)
+        if let superView = self.superview {
+            for view in views {
+                superView.addConstraintsWithFormat(format: "V:[v0(==v1)]", views: self, view)
+            }
         }
     }
     /// RK: Sets view's height and width equal to a view
@@ -221,4 +229,21 @@ extension UIView {
         anchorCenterXToSuperview()
         anchorCenterYToSuperview()
     }
+    
+    /// Adds view to its super view with 16px spacing
+    ///
+    /// - Parameter view: UIView, UICollectionViewCell, UITableViewCell
+    func attachViewWithDefaultMarginTo(view:UIView){
+        view.addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: self)
+        view.addConstraintsWithFormat(format: "V:|-16-[v0(\(16))]", views: self)
+    }
+    
+    /// Adds input view to its super view after a view
+    ///
+    /// - Parameter after: UIView
+    /// - Parameter inView: UIView, UICollectionViewCell, UITableViewCell
+    func attachSelfAfterView(after: UIView, inView: UIView){
+        inView.addConstraintsWithFormat(format: "V:[v0]-0-[v1]", views: after, self)
+    }
+    
 }
