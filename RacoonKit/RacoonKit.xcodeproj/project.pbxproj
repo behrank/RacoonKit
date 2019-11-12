@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F7B1607237AB668005EECBE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0F7B1605237AB668005EECBE /* README.md */; };
+		0F7B1608237AB668005EECBE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0F7B1606237AB668005EECBE /* LICENSE */; };
 		0FBC8FF423754A1F00B80AEA /* RacoonKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FBC8FF223754A1F00B80AEA /* RacoonKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0FBC8FFF23754A3D00B80AEA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC8FFA23754A3D00B80AEA /* Common.swift */; };
 		0FBC900023754A3D00B80AEA /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC8FFB23754A3D00B80AEA /* UIView+Frame.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F7B1605237AB668005EECBE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		0F7B1606237AB668005EECBE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		0FBC8FEF23754A1F00B80AEA /* RacoonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RacoonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FBC8FF223754A1F00B80AEA /* RacoonKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RacoonKit.h; sourceTree = "<group>"; };
 		0FBC8FF323754A1F00B80AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		0FBC8FF123754A1F00B80AEA /* RacoonKit */ = {
 			isa = PBXGroup;
 			children = (
+				0F7B1606237AB668005EECBE /* LICENSE */,
+				0F7B1605237AB668005EECBE /* README.md */,
 				0FBC8FF223754A1F00B80AEA /* RacoonKit.h */,
 				0FBC8FFA23754A3D00B80AEA /* Common.swift */,
 				0FBC8FFE23754A3D00B80AEA /* UIView.swift */,
@@ -162,6 +168,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F7B1608237AB668005EECBE /* LICENSE in Resources */,
+				0F7B1607237AB668005EECBE /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
