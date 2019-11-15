@@ -3,6 +3,10 @@
 [![License](https://img.shields.io/cocoapods/l/RacoonKit.svg?style=flat)](https://cocoapods.org/pods/RacoonKit)
 [![Platform](https://img.shields.io/cocoapods/p/RacoonKit.svg?style=flat)](https://cocoapods.org/pods/RacoonKit)
 
+<p align="center">
+<img src="https://github.com/behrank/RacoonKit/blob/master/Example/RacoonKit/Images.xcassets/logorounded.imageset/logorounded.png" width="256" />
+</p>
+
 ## RacoonKit
 
 RacoonKit is a layout API for iOS platform. RacoonKit is written with Swift 4 and uses Apple Visual Format Language and NSLayoutConstraint SDK.
