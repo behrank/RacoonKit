@@ -75,7 +75,7 @@ public enum RacoonDimension {
 }
 
 public struct RacoonFormat {
-    var constant: RacoonDimension   = .none
+    var constant: RacoonDimension           = .none
     private var priority: RacoonPriority    = .none
     private var equality: RacoonEquality    = .none
     

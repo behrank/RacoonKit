@@ -88,7 +88,7 @@ extension UIView {
     /// RK: Sets margin with priority and/or equal constraint options for view to its superview
     /// - Parameter view: UIView and its subclasses
     /// - Parameter format: RacoonFormat with value, priority and equal parameter
-    public func setMarginTo(view: UIView, of format: RacoonFormat) {
+    public func setMarginTo(view: UIView, with format: RacoonFormat) {
         if let superView = self.superview {
             switch format.constant {
                 case .top(_):
@@ -108,7 +108,7 @@ extension UIView {
     /// RK: Sets margin for view to its superview
     /// - Parameter view: UIView and its subclasses
     /// - Parameter margin: RacoonDimension with value
-    public func setMarginTo(view: UIView, of margin: RacoonDimension) {
+    public func setMarginTo(view: UIView, with margin: RacoonDimension) {
         if let superView = self.superview {
             switch margin {
                 case .top(let value):
