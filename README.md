@@ -11,6 +11,8 @@
 
 RacoonKit is a layout API for iOS platform. RacoonKit is written with Swift 4 and uses Apple Visual Format Language and NSLayoutConstraint SDK.
 
+Please take a look at this article to learn more about AVF => [https://www.raywenderlich.com/277-auto-layout-visual-format-language-tutorial](https://www.raywenderlich.com/277-auto-layout-visual-format-language-tutorial)
+
 ## Installation [CocoaPods](https://cocoapods.com)
 
 Add RacoonKit to your pod file.
