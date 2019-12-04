@@ -34,66 +34,110 @@ extension UIView {
     /// - Parameter format: String
     /// - Parameter views: UIView and its subclasses
     public func addConstraintsWithFormat(format: String, views: UIView...) {
-        
         var viewsDic = [String: UIView]()
-        
         for (index,view) in views.enumerated() {
             let key = "v\(index)"
             view.translatesAutoresizingMaskIntoConstraints = false
             viewsDic[key] = view
         }
-        
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDic))
     }
-    /// RK: Sets margins for view for its superview
+    
+    /// RK: Sets margins with priority and/or equal constraint options for view to its superview
+    /// - Parameter margins: an array of RacoonFormat with value, priority and equal parameter
+    public func setMarginWith(formats: RacoonFormat...) {
+        if let superView = self.superview {
+            for format in formats {
+                switch format.constant {
+                    case .top(_):
+                        superView.addConstraintsWithFormat(format: "V:|-\(format.constantAsValue())-[v0]", views: self)
+                    case .bottom(_):
+                        superView.addConstraintsWithFormat(format: "V:[v0]-\(format.constantAsValue())-|", views: self)
+                    case .right(_):
+                        superView.addConstraintsWithFormat(format: "H:[v0]-\(format.constantAsValue())-|", views: self)
+                    case .left(_):
+                        superView.addConstraintsWithFormat(format: "H:|-\(format.constantAsValue())-[v0]", views: self)
+                    default:
+                        break
+                }
+            }
+        }
+    }
+    
+    /// RK: Sets margins for view to its superview
     /// - Parameter margins: an array of RacoonDimension with value
     public func setMargins(_ margins: RacoonDimension...) {
         if let superView = self.superview {
-            
-//            for margin in margins {
-//                switch margin {
-//                    case .top(let value):
-//                        superView.addConstraintsWithFormat(format: "V:|-\(value)-[v0]", views: self)
-//                    case .bottom(let value):
-//                        superView.addConstraintsWithFormat(format: "V:[v0]-\(value)-|", views: self)
-//                    case .right(let value):
-//                        superView.addConstraintsWithFormat(format: "H:[v0]-\(value)-|", views: self)
-//                    case .left(let value):
-//                        superView.addConstraintsWithFormat(format: "H:|-\(value)-[v0]", views: self)
-//                }
-//            }
+            for margin in margins {
+                switch margin {
+                    case .top(let value):
+                        superView.addConstraintsWithFormat(format: "V:|-\(value)-[v0]", views: self)
+                    case .bottom(let value):
+                        superView.addConstraintsWithFormat(format: "V:[v0]-\(value)-|", views: self)
+                    case .right(let value):
+                        superView.addConstraintsWithFormat(format: "H:[v0]-\(value)-|", views: self)
+                    case .left(let value):
+                        superView.addConstraintsWithFormat(format: "H:|-\(value)-[v0]", views: self)
+                    default:
+                        break
+                }
+            }
         }
     }
-    /// RK: Sets margin for view for its superview
+    
+    /// RK: Sets margin with priority and/or equal constraint options for view to its superview
+    /// - Parameter view: UIView and its subclasses
+    /// - Parameter format: RacoonFormat with value, priority and equal parameter
+    public func setMarginTo(view: UIView, of format: RacoonFormat) {
+        if let superView = self.superview {
+            switch format.constant {
+                case .top(_):
+                    superView.addConstraintsWithFormat(format: "V:[v0]-\(format.constantAsValue())-[v1]", views: self, view)
+                case .bottom(_):
+                    superView.addConstraintsWithFormat(format: "V:[v1]-\(format.constantAsValue())-[v0]", views: self, view)
+                case .right(_):
+                    superView.addConstraintsWithFormat(format: "H:[v1]-\(format.constantAsValue())-[v0]", views: self, view)
+                case .left(_):
+                    superView.addConstraintsWithFormat(format: "H:[v0]-\(format.constantAsValue())-[v1]", views: self, view)
+                default:
+                    break
+            }
+        }
+    }
+    
+    /// RK: Sets margin for view to its superview
     /// - Parameter view: UIView and its subclasses
     /// - Parameter margin: RacoonDimension with value
     public func setMarginTo(view: UIView, of margin: RacoonDimension) {
-
         if let superView = self.superview {
-//            switch margin {
-//                case .top(let value):
-//                    superView.addConstraintsWithFormat(format: "V:[v0]-\(value)-[v1]", views: self, view)
-//                case .bottom(let value):
-//                    superView.addConstraintsWithFormat(format: "V:[v1]-\(value)-[v0]", views: self, view)
-//                case .right(let value):
-//                    superView.addConstraintsWithFormat(format: "H:[v1]-\(value)-[v0]", views: self, view)
-//                case .left(let value):
-//                    superView.addConstraintsWithFormat(format: "H:[v0]-\(value)-[v1]", views: self, view)
-//            }
+            switch margin {
+                case .top(let value):
+                    superView.addConstraintsWithFormat(format: "V:[v0]-\(value)-[v1]", views: self, view)
+                case .bottom(let value):
+                    superView.addConstraintsWithFormat(format: "V:[v1]-\(value)-[v0]", views: self, view)
+                case .right(let value):
+                    superView.addConstraintsWithFormat(format: "H:[v1]-\(value)-[v0]", views: self, view)
+                case .left(let value):
+                    superView.addConstraintsWithFormat(format: "H:[v0]-\(value)-[v1]", views: self, view)
+                default:
+                    break
+            }
         }
-
     }
+    
     /// RK: Sets of a view's width
     /// - Parameter value: CGFloat
     public func setWidth(_ value: CGFloat) {
         addConstraintsWithFormat(format: "H:[v0(\(value))]", views: self)
     }
+    
     /// RK: Sets equal of a view's width to its superview
     public func setWidthEqualToSuperview() {
         if let superView = self.superview {
             superView.addConstraintsWithFormat(format: "H:|[v0]|", views: self)
         }
     }
+    
     /// RK: Sets view's width equal to other view
     /// - Parameter view: UIView and its subclasses
     public func setWidthEqualTo(view: UIView) {
@@ -101,6 +145,7 @@ extension UIView {
             superView.addConstraintsWithFormat(format: "H:[v0(==v1)]", views: self, view)
         }
     }
+    
     /// RK: Sets view's width equal to multiple views
     /// - Parameter views: an array of UIView and its subclasses
     public func setWidthEqualTo(views: UIView...) {
@@ -110,6 +155,7 @@ extension UIView {
             }
         }
     }
+    
     /// RK: Sets of a view's height
     /// - Parameter value: CGFloat
     public func setHeight(_ value: CGFloat) {
@@ -122,6 +168,7 @@ extension UIView {
             superView.addConstraintsWithFormat(format: "V:|[v0]|", views: self)
         }
     }
+    
     /// RK: Sets view's height equal to other view
     /// - Parameter view: UIView and its subclasses
     public func setHeightEqualTo(view: UIView) {
@@ -129,6 +176,7 @@ extension UIView {
             superView.addConstraintsWithFormat(format: "V:[v0(==v1)]", views: self, view)
         }
     }
+    
     /// RK: Sets view's height equal to multiple views
     /// - Parameter views: an array of UIView and its subclasses
     public func setHeightEqualTo(views: UIView...) {
@@ -138,12 +186,14 @@ extension UIView {
             }
         }
     }
+    
     /// RK: Sets view's height and width equal to a view
     /// - Parameter views: an array of UIView and its subclasses
     public func setEqualDimesionsWith(view: UIView) {
         setWidthEqualTo(view: view)
         setHeightEqualTo(view: view)
     }
+    
     /// RK: Sets view's height and width equal to its superview
     public func fillSuperview() {
         translatesAutoresizingMaskIntoConstraints = false
@@ -154,6 +204,7 @@ extension UIView {
             bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
         }
     }
+    
     /// RK: Places a view according to its margins
     ///
     ///- Parameter top: top anchor of superview
@@ -169,6 +220,7 @@ extension UIView {
         
         _ = anchorWithReturnAnchors(top, left: left, bottom: bottom, right: right, topConstant: topConstant, leftConstant: leftConstant, bottomConstant: bottomConstant, rightConstant: rightConstant, widthConstant: widthConstant, heightConstant: heightConstant)
     }
+    
     /// RK: Places a view according to its margins. Returns added constraints
     ///
     ///- Parameter top: top anchor of superview
@@ -212,6 +264,7 @@ extension UIView {
         
         return anchors
     }
+    
     /// RK: Aligns view to superview horizontaly
     public func anchorCenterXToSuperview(constant: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false
@@ -219,6 +272,7 @@ extension UIView {
             centerXAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
         }
     }
+    
     /// RK: Aligns view to superview verticaly
     public func anchorCenterYToSuperview(constant: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false
@@ -226,6 +280,7 @@ extension UIView {
             centerYAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
         }
     }
+    
     /// RK: Places to view superview center
     public func anchorCenterSuperview() {
         anchorCenterXToSuperview()
@@ -247,5 +302,4 @@ extension UIView {
     func attachSelfAfterView(after: UIView, inView: UIView){
         inView.addConstraintsWithFormat(format: "V:[v0]-0-[v1]", views: after, self)
     }
-    
 }

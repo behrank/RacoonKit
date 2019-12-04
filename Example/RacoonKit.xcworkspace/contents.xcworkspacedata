@@ -7,4 +7,18 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:Pods"
+      name = "Frameworks">
+      <Group
+         location = "group:Pods"
+         name = "iOS">
+         <FileRef
+            location = "developer:Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework">
+         </FileRef>
+         <FileRef
+            location = "developer:Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework">
+         </FileRef>
+      </Group>
+   </Group>
 </Workspace>

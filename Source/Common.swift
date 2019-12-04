@@ -75,7 +75,7 @@ public enum RacoonDimension {
 }
 
 public struct RacoonFormat {
-    private var constant: RacoonDimension   = .none
+    var constant: RacoonDimension   = .none
     private var priority: RacoonPriority    = .none
     private var equality: RacoonEquality    = .none
     
@@ -92,19 +92,38 @@ public struct RacoonFormat {
         self.constant = constant
         self.equality = equality
     }
+    
     public init(constant: RacoonDimension, equality: RacoonEquality, priority: RacoonPriority) {
         self.constant = constant
         self.priority = priority
         self.equality = equality
     }
+    
+    public func constantAsValue() -> String {
+        if self.priority != .none && self.equality == .none {
+            return valueWithPriority()
+        } else if self.priority == .none && self.equality != .none {
+            return valueWithEquality()
+        } else if self.priority != .none && self.equality != .none {
+            return valueWithPriorityAndEquality()
+        } else {
+            return getConstant()
+        }
+    }
 
-    internal func valueWithPriority() -> String {
+    private func getConstant() -> String {
+        return "\(constant)"
+    }
+    
+    private func valueWithPriority() -> String {
         return self.constant.asValue.appending(self.priority.asValue)
     }
-    internal func valueWithEquality() -> String {
+    
+    private func valueWithEquality() -> String {
         return self.equality.asValue.appending(self.constant.asValue)
     }
-    internal func valueWithPriorityAndEquality() -> String {
+    
+    private func valueWithPriorityAndEquality() -> String {
         return valueWithEquality().appending(self.priority.asValue)
     }
 }
