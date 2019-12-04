@@ -112,7 +112,7 @@ public struct RacoonFormat {
     }
 
     private func getConstant() -> String {
-        return "\(constant)"
+        return "\(constant.asValue)"
     }
     
     private func valueWithPriority() -> String {
