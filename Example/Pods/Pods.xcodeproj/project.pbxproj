@@ -49,25 +49,25 @@
 		1BEE018DBC29C56514184A45C933EEEC /* Pods-RacoonKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RacoonKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1CBA8DF4778A8FB912F522898833C434 /* Pods-RacoonKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RacoonKit_Example-Info.plist"; sourceTree = "<group>"; };
 		1D49F3881B592B4669C809E4CEA0D14F /* RacoonKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RacoonKit.xcconfig; sourceTree = "<group>"; };
-		22A755A3C57507332AF90EBE4FABA651 /* RacoonKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = RacoonKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		22A755A3C57507332AF90EBE4FABA651 /* RacoonKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = RacoonKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2B34FE59B3747E08DB676D6C45FC2CEC /* Pods-RacoonKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RacoonKit_Tests-Info.plist"; sourceTree = "<group>"; };
 		2B3ADC4603D11E6D3F18C4CB38215031 /* Pods-RacoonKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RacoonKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		34824B64FD6874FE0512AF5F131DFA53 /* Pods-RacoonKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RacoonKit_Example.modulemap"; sourceTree = "<group>"; };
 		3CD0514448BED9422F3196FDFC58EB27 /* Pods-RacoonKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RacoonKit_Tests-dummy.m"; sourceTree = "<group>"; };
-		3CFF2A46B4241526E3D148E234FCF23F /* Pods_RacoonKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RacoonKit_Tests.framework; path = "Pods-RacoonKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CFF2A46B4241526E3D148E234FCF23F /* Pods_RacoonKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RacoonKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E1FA8CE757EFAA57919E6A9EFF17E1B /* Pods-RacoonKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RacoonKit_Example-dummy.m"; sourceTree = "<group>"; };
-		413619BA02A1183EF94BEF652F3A045A /* RacoonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RacoonKit.framework; path = RacoonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		413619BA02A1183EF94BEF652F3A045A /* RacoonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RacoonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5281A07DEEE35C1C539E5084E4BEBDD9 /* UIView+Positioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Positioning.swift"; path = "Source/UIView+Positioning.swift"; sourceTree = "<group>"; };
 		57DBD9CC81AEA0F99B785A98F2C6E4A0 /* UIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Source/UIView.swift; sourceTree = "<group>"; };
 		6E8C7076D73C1DEB030E276D04661C1C /* Pods-RacoonKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RacoonKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		70BB4ABF82B65900EB310C4483E2C408 /* RacoonKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RacoonKit-prefix.pch"; sourceTree = "<group>"; };
 		783731F486AC6631F50CB43F1391C465 /* Pods-RacoonKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RacoonKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		78A5CFBF8DC6DA8FC111EAD65CD93354 /* Pods_RacoonKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RacoonKit_Example.framework; path = "Pods-RacoonKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A5CFBF8DC6DA8FC111EAD65CD93354 /* Pods_RacoonKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RacoonKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA94DCB1071E9C8C313FBAF84DB9AFE /* RacoonKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RacoonKit-Info.plist"; sourceTree = "<group>"; };
-		8EAE6F2AFBB8DADEEB91A91A98255D05 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8EAE6F2AFBB8DADEEB91A91A98255D05 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A59C1E10BCBBE4D845D62C5DA3D22E81 /* Pods-RacoonKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RacoonKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		AC7FEE4A9FB6A54590509E916081B0D7 /* Pods-RacoonKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RacoonKit_Tests.modulemap"; sourceTree = "<group>"; };
 		BD30A30E1681B00ED4A19261F995D512 /* Pods-RacoonKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RacoonKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		D8D4C76B43E5A870D79CC3C2823BF3CA /* Common.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Common.swift; path = Source/Common.swift; sourceTree = "<group>"; };
 		E00871B1692FFA91320F92A4EDB8E2E3 /* RacoonKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RacoonKit-umbrella.h"; sourceTree = "<group>"; };
 		EA1AAB260EAB350A7FACFBBB51B5BE65 /* Pods-RacoonKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RacoonKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F2A2694CCF7D8F8A3AEFF8ED25667C2E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F2A2694CCF7D8F8A3AEFF8ED25667C2E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +331,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					E2C6884F8216FB2C04D6B0834E44412B = {
+						LastSwiftMigration = 1110;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -525,6 +530,7 @@
 			baseConfigurationReference = BE5FDE644FE51A3A6423DBFFE80B6483 /* Pods-RacoonKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -548,6 +554,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -594,6 +602,7 @@
 			baseConfigurationReference = EA1AAB260EAB350A7FACFBBB51B5BE65 /* Pods-RacoonKit_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -617,6 +626,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -744,8 +754,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

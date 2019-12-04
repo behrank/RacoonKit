@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RacoonKit'
-  s.version          = '0.8.1'
+  s.version          = '1.0.0'
   s.summary          = 'A lightwight UI framework => RacoonKit'
-  s.description  = "A lightwight UI framework written with using Swift."
+  s.description      = "A lightwight UI framework written with using Swift."
   s.homepage         = 'https://github.com/behrank/RacoonKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'behrank' => 'behrank@gmail.com' }
