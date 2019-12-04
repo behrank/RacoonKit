@@ -64,6 +64,24 @@ newView.setWidthEqualTo(views: view, view, view)
 newView.setHeightEqualTo(views: view, view, view)
 ```
 
+Setting 'Equal' and 'Priority' to a constraint
+
+With new RacoonFormat, you can define priority and equal properties.
+Use setMarginWith(formats: RacoonFormat...) method to define multiple constraints.
+
+```bash
+firstView.setMarginWith(formats: RacoonFormat(constant: .top(value: 0)))
+firstView.setMarginWith(formats: RacoonFormat(constant: .left(value: 10), equality: RacoonEquality.greaterOrEqual))
+firstView.setMarginWith(formats: RacoonFormat(constant: .right(value: 20), equality: RacoonEquality.lessOrEqual, priority: RacoonPriority.high))
+```
+ 
+Use RacoonFormat for setting relationships between two views:
+```bash
+firstView.setMarginTo(view: secondView, with: RacoonFormat(constant: .top(value: 0)))
+firstView.setMarginTo(view: secondView, with: RacoonFormat(constant: .left(value: 10), equality: RacoonEquality.greaterOrEqual))
+firstView.setMarginTo(view: secondView, with: RacoonFormat(constant: .right(value: 20), equality: RacoonEquality.lessOrEqual, priority: RacoonPriority.high))
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
