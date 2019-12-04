@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         //How to set margins to either self and other UIView subclasses
         firstView.setMargins(RacoonDimension.top(value: 8), RacoonDimension.left(value: 8), RacoonDimension.right(value: 8), RacoonDimension.bottom(value: 8))
         firstView.setMarginTo(view: secondView, of: RacoonDimension.top(value: 12))
-
+        
         //How to set dimensions
         firstView.setHeight(100)
         firstView.setWidth(125)
@@ -34,6 +34,8 @@ class ViewController: UIViewController {
         firstView.setHeightEqualTo(view: secondView)
         firstView.setWidthEqualTo(views: secondView, thirdView, fourthView)
         firstView.setHeightEqualTo(views: secondView, thirdView, fourthView)
+        
+        let format = RacoonFormat(constant: RacoonDimension.top(value: 0), equality: RacoonEquality.equal, priority: RacoonPriority.high)
     }
 }
 

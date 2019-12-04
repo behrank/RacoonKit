@@ -50,36 +50,38 @@ extension UIView {
     public func setMargins(_ margins: RacoonDimension...) {
         if let superView = self.superview {
             
-            for margin in margins {
-                switch margin {
-                    case .top(let value):
-                        superView.addConstraintsWithFormat(format: "V:|-\(value)-[v0]", views: self)
-                    case .bottom(let value):
-                        superView.addConstraintsWithFormat(format: "V:[v0]-\(value)-|", views: self)
-                    case .right(let value):
-                        superView.addConstraintsWithFormat(format: "H:[v0]-\(value)-|", views: self)
-                    case .left(let value):
-                        superView.addConstraintsWithFormat(format: "H:|-\(value)-[v0]", views: self)
-                }
-            }
+//            for margin in margins {
+//                switch margin {
+//                    case .top(let value):
+//                        superView.addConstraintsWithFormat(format: "V:|-\(value)-[v0]", views: self)
+//                    case .bottom(let value):
+//                        superView.addConstraintsWithFormat(format: "V:[v0]-\(value)-|", views: self)
+//                    case .right(let value):
+//                        superView.addConstraintsWithFormat(format: "H:[v0]-\(value)-|", views: self)
+//                    case .left(let value):
+//                        superView.addConstraintsWithFormat(format: "H:|-\(value)-[v0]", views: self)
+//                }
+//            }
         }
     }
     /// RK: Sets margin for view for its superview
     /// - Parameter view: UIView and its subclasses
     /// - Parameter margin: RacoonDimension with value
     public func setMarginTo(view: UIView, of margin: RacoonDimension) {
+
         if let superView = self.superview {
-            switch margin {
-                case .top(let value):
-                    superView.addConstraintsWithFormat(format: "V:[v0]-\(value)-[v1]", views: self, view)
-                case .bottom(let value):
-                    superView.addConstraintsWithFormat(format: "V:[v1]-\(value)-[v0]", views: self, view)
-                case .right(let value):
-                    superView.addConstraintsWithFormat(format: "H:[v1]-\(value)-[v0]", views: self, view)
-                case .left(let value):
-                    superView.addConstraintsWithFormat(format: "H:[v0]-\(value)-[v1]", views: self, view)
-            }
+//            switch margin {
+//                case .top(let value):
+//                    superView.addConstraintsWithFormat(format: "V:[v0]-\(value)-[v1]", views: self, view)
+//                case .bottom(let value):
+//                    superView.addConstraintsWithFormat(format: "V:[v1]-\(value)-[v0]", views: self, view)
+//                case .right(let value):
+//                    superView.addConstraintsWithFormat(format: "H:[v1]-\(value)-[v0]", views: self, view)
+//                case .left(let value):
+//                    superView.addConstraintsWithFormat(format: "H:[v0]-\(value)-[v1]", views: self, view)
+//            }
         }
+
     }
     /// RK: Sets of a view's width
     /// - Parameter value: CGFloat

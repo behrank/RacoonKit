@@ -27,6 +27,87 @@
 
 import UIKit
 
-public enum RacoonDimension {
-    case top(value: CGFloat = 0), left(value: CGFloat = 0), right(value: CGFloat = 0), bottom(value: CGFloat = 0)
+public enum RacoonPriority {
+    case none, required, high, low
+    
+    public var asValue: String {
+        switch self {
+            case .none:
+                return ""
+            case .low:
+                return "@250"
+            case .high:
+                return "@750"
+            case .required:
+                return "@1000"
+        }
+    }
 }
+
+public enum RacoonEquality {
+    case none, equal, greaterOrEqual, lessOrEqual
+    
+    public var asValue: String {
+        switch self {
+            case .none:
+                return ""
+            case .equal:
+                return "=="
+            case .greaterOrEqual:
+                return ">="
+            case .lessOrEqual:
+                return "<="
+        }
+    }
+}
+
+public enum RacoonDimension {
+    case none, top(value: CGFloat = 0), left(value: CGFloat = 0), right(value: CGFloat = 0), bottom(value: CGFloat = 0)
+    
+    public var asValue: String {
+        switch self {
+            case .top(let value), .left(let value), .right(let value), .bottom(let value):
+                return "\(value)"
+            default:
+                return ""
+        }
+    }
+}
+
+public struct RacoonFormat {
+    private var constant: RacoonDimension   = .none
+    private var priority: RacoonPriority    = .none
+    private var equality: RacoonEquality    = .none
+    
+    public init(constant: RacoonDimension) {
+        self.constant = constant
+    }
+    
+    public init(constant: RacoonDimension, priority: RacoonPriority) {
+        self.constant = constant
+        self.priority = priority
+    }
+    
+    public init(constant: RacoonDimension, equality: RacoonEquality) {
+        self.constant = constant
+        self.equality = equality
+    }
+    public init(constant: RacoonDimension, equality: RacoonEquality, priority: RacoonPriority) {
+        self.constant = constant
+        self.priority = priority
+        self.equality = equality
+    }
+
+    internal func valueWithPriority() -> String {
+        return self.constant.asValue.appending(self.priority.asValue)
+    }
+    internal func valueWithEquality() -> String {
+        return self.equality.asValue.appending(self.constant.asValue)
+    }
+    internal func valueWithPriorityAndEquality() -> String {
+        return valueWithEquality().appending(self.priority.asValue)
+    }
+}
+
+
+

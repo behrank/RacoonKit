@@ -63,18 +63,19 @@ extension UIView {
     /// - Parameter dimension: RacoonDimension
     /// - Parameter value: CGFloat - Default is 0
     /// - Parameter color: UIColor
-    public func addBorderForDimension(for dimension: RacoonDimension, color: UIColor) {
-        switch dimension {
-            case .top(let value):
-                addBorderFor(x: 0, y: 0, width: frame.width, height: value, color: color)
-            case .bottom(let value):
-                addBorderFor(x: 0, y: frame.height - value, width: frame.width, height: value, color: color)
-            case .left(let value):
-                addBorderFor(x: 0, y: 0, width: value, height: frame.height, color: color)
-            case .right(let value):
-                addBorderFor(x: frame.width - value, y: 0, width: value, height: frame.height, color: color)
-        }
-    }
+//    public func addBorderForDimension(for dimension: RacoonDimension, color: UIColor) {
+//        
+//        switch dimension {
+//            case .top(let value):
+//                addBorderFor(x: 0, y: 0, width: frame.width, height: value, color: color)
+//            case .bottom(let value):
+//                addBorderFor(x: 0, y: frame.height - value, width: frame.width, height: value, color: color)
+//            case .left(let value):
+//                addBorderFor(x: 0, y: 0, width: value, height: frame.height, color: color)
+//            case .right(let value):
+//                addBorderFor(x: frame.width - value, y: 0, width: value, height: frame.height, color: color)
+//        }
+//    }
     
     fileprivate func addBorderFor(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, color: UIColor) {
         let border = CALayer()
